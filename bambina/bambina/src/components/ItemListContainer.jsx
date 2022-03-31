@@ -8,7 +8,9 @@ export default function ItemListContainer() {
         <>
         <div>
         <Greetings name="nuevo usuario"/>
+        <div className="contador">
         <ItemCount/>
+        </div>
         </div>
         </>
     );

@@ -45,8 +45,10 @@
 .logo{
   margin-right: 20px;
 }
-
-.greetings{
+.contador{
+  display: flex;
   justify-content: center;
-  font-size: 1000px;
+  border-color: #ff3e99;
+  border-style: solid;
+  border-radius: 10px;
 }

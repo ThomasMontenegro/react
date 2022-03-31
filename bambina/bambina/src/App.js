@@ -10,7 +10,9 @@ export default function App() {
   return (
     <>
     <NavBarr />
-    <ItemListContainer/>
+    <div className="d-flex justify-content-center">
+      <ItemListContainer/>
+    </div>
     </>
   );
 }

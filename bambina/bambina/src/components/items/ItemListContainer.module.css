@@ -1,0 +1,11 @@
+.contador{
+    display: flex;
+    justify-content: center;
+    border-color: #ff3e99;
+    border-style: solid;
+    border-radius: 10px;
+  }
+  .items{
+    display: flex;
+    justify-content: space-between;
+  }

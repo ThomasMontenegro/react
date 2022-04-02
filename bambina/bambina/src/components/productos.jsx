@@ -1,22 +1,23 @@
+
 const productos = [
     {
         id: 1,
-        nombre: "vela",
+        nombre: "Vela",
         precio: "$180",
-        imagen: "",
+        imagen: "https://chufasustentable.com/1613-large_default/vela-de-soja-the.jpg",
     },
 
     {
         id: 2,
-        nombre: "almohadon",
+        nombre: "Almohadon",
         precio: "$250",
-        imagen: "./multimedia/vela-simple.png",
+        imagen: "https://gpdiseno.com.ar/wp-content/uploads/2018/09/almohadon-unicornio-gp-diseno-500x487.jpg",
     },
     {
         id: 3,
-        nombre:"mate",
+        nombre:"Mate",
         precio: "$150",
-        imagen: ""
+        imagen: "http://http2.mlstatic.com/D_615097-MLA40077287586_122019-O.jpg"
 
 
     }

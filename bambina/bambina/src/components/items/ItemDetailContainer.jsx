@@ -15,7 +15,7 @@ export default function ItemDetailContainer() {
     }, [producto])
 
     return(
-        <>
+        <>  
             <ItemDetail product={product} />
         </>
     );

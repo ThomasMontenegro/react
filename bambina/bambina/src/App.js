@@ -12,7 +12,7 @@ export default function App() {
   return (
     <>
     <BrowserRouter>
-      <NavBarr />
+      <NavBarr/>
       <Routes>
       <Route exact path="/" element={<ItemListContainer/>}/>
       <Route exact path="/details" element={<ItemDetailContainer/>}/>

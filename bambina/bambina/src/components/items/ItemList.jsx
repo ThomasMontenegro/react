@@ -9,7 +9,7 @@ export default function ItemList({productos}){
             key={productos.id}
             nombre={productos.nombre}
             precio={productos.precio}
-            imagen={productos.imagen} />
+            imagen={productos.imagen}/>
         ))
     )
 }

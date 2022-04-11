@@ -1,0 +1,14 @@
+.details{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    border-style: double;
+    border-color: black;
+    background-color: pink;
+}
+.imgItemDetails{
+    display: flex;
+    max-width: 500px;
+    margin-right: 50px;
+}
+

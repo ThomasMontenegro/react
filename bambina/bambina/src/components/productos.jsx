@@ -24,3 +24,13 @@ const productos = [
 ]
 
 export default productos;
+
+export const product=
+{
+    id: 1,
+    nombre: "Vela",
+    precio: "$180",
+    imagen: "https://chufasustentable.com/1613-large_default/vela-de-soja-the.jpg",
+    descripcion: "vela aromatica de soja contamos con mas de 15 fragancias para que te enamores"
+};
+

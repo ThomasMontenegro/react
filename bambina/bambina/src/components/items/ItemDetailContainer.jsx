@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import FetchDetail  from "../Fetch";
-import productos from "../productos";
+import { FetchDetail }  from "../Fetch";
 import ItemDetail from "./ItemDetail";
 import { useParams } from "react-router-dom";
 
@@ -19,7 +18,7 @@ export default function ItemDetailContainer() {
 
     return(
         <>  
-            <ItemDetail product={producto} />
+            <ItemDetail producto={producto} />
         </>
     );
 

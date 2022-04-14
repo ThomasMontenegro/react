@@ -1,8 +1,7 @@
 import React from "react";
 import styles from "./ItemDetail.module.css"
 
-
-export default function ItemDetail({producto}) {
+export default function ItemDetail( {producto} ) {
     return(
         <>
             <div className={styles.details}>

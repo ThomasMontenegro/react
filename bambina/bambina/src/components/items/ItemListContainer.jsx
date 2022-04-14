@@ -5,13 +5,13 @@ import { useParams } from "react-router-dom";
 import s from "./ItemListContainer.module.css";
 
 export default function ItemListContainer() {
-    const [items, setItems] = useState ([]);
+    const [products, setProducts] = useState ([]);
     const {categoryId} = useParams()
 
     
     useEffect(() => {
         Fetch(categoryId)
-        .then (res => setItems(res))
+        .then (res => setProducts(res))
         .catch(error => console.log (error))
     }, [categoryId])
 
@@ -19,7 +19,7 @@ export default function ItemListContainer() {
     return(
         <>
          <div className={s.items}>
-        <ItemList productos={items}/>
+        <ItemList productos={products}/>
         </div>
         </>
     );

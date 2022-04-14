@@ -1,5 +1,5 @@
 import React from "react";
-import { Nav, Navbar, Container, NavDropdown } from "react-bootstrap";
+import { Nav, Navbar, Container } from "react-bootstrap";
 import CartWidget from "./CartWidget";
 import logo from "./logo-bambina.png";
 import { Link } from "react-router-dom";

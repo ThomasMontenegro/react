@@ -1,4 +1,4 @@
-import productos, {id} from "./productos";
+import productos from "./productos";
 
 
 const Fetch = (categoryId) => {
@@ -18,7 +18,7 @@ export default Fetch;
 
  export const FetchDetail = (id) => {
     return new Promise ((resolve, reject) =>{
-        const productoDetallado= productos.find((producto)=> producto.id === Number(id))
+        const productoDetallado= productos.find((producto)=> producto.id === parseInt(id))
         setTimeout(() => {
               resolve(productoDetallado);
 }, 1000)})};

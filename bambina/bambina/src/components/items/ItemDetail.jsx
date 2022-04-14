@@ -1,15 +1,16 @@
 import React from "react";
 import styles from "./ItemDetail.module.css"
 
-export default function ItemDetail({product}) {
+
+export default function ItemDetail({producto}) {
     return(
         <>
             <div className={styles.details}>
-                <img src={product.imagen} alt={product.nombre} className={styles.imgItemDetails} />
+                <img src={producto.imagen} alt={producto.nombre} className={styles.imgItemDetails} />
                 <div>
-                <h2>{product.nombre}</h2>
-                <h3>{product.precio}</h3>
-                <h4 style={{fontSize:"50px"}}>{product.descripcion}</h4>
+                <h2>{producto.nombre}</h2>
+                <h3>{producto.precio}</h3>
+                <h4 style={{fontSize:"50px"}}>{producto.descripcion}</h4>
                 </div>
             </div>
         </>

@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Fetch from "../Fetch";
-import productos from "../productos";
 import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
 import s from "./ItemListContainer.module.css";
 
 export default function ItemListContainer() {
     const [items, setItems] = useState ([]);
+    const {categoryId} = useParams()
 
+    
     useEffect(() => {
-        Fetch(3000, productos)
+        Fetch(categoryId)
         .then (res => setItems(res))
         .catch(error => console.log (error))
-    }, [items])
+    }, [categoryId])
 
 
     return(

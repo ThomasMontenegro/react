@@ -15,7 +15,8 @@ export default function App() {
       <NavBarr/>
       <Routes>
       <Route exact path="/" element={<ItemListContainer/>}/>
-      <Route exact path="/details" element={<ItemDetailContainer/>}/>
+      <Route exact path="/category/:categoryId" element={<ItemListContainer/>}/>
+      <Route exact path="/item/:id" element={<ItemDetailContainer/>}/>
       </Routes>
     </BrowserRouter>
     </>

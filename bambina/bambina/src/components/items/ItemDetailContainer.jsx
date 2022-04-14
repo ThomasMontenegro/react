@@ -1,22 +1,25 @@
 import React, { useEffect, useState } from "react";
-import Fetch from "../Fetch";
-import { product } from "../productos";
+import FetchDetail  from "../Fetch";
+import productos from "../productos";
 import ItemDetail from "./ItemDetail";
+import { useParams } from "react-router-dom";
 
 export default function ItemDetailContainer() {
 
     const [producto,setProducto]= useState ({})
+    const {id} = useParams()
+
 
     useEffect(() => {
-        Fetch(2000, product)
+        FetchDetail(id)
         .then((res) => {
             setProducto(res)
         })
-    }, [producto])
+    }, [id])
 
     return(
         <>  
-            <ItemDetail product={product} />
+            <ItemDetail product={producto} />
         </>
     );
 

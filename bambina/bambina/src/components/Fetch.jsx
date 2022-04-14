@@ -1,13 +1,24 @@
-let correct = true;
+import productos, {id} from "./productos";
 
-const Fetch = (time,task) => {
+
+const Fetch = (categoryId) => {
     return new Promise ((resolve, reject) =>{
+        const productoFiltrados = productos.filter((producto)=>producto.category === categoryId)
         setTimeout(() => {
-            if (correct) {
-                resolve(task);
+            if (categoryId) {
+                resolve(productoFiltrados);
             } else {
-                reject("error");
+                resolve(productos);
             }
-}, time)})};
+}, 2000)})};
 
 export default Fetch;
+
+
+
+ export const FetchDetail = (id) => {
+    return new Promise ((resolve, reject) =>{
+        const productoDetallado= productos.find((producto)=> producto.id === Number(id))
+        setTimeout(() => {
+              resolve(productoDetallado);
+}, 1000)})};

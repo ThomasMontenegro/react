@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Fetch from "../Fetch";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import s from "./ItemListContainer.module.css";
+import { traerProductos } from "../products";
 
 export default function ItemListContainer() {
     const [products, setProducts] = useState ([]);
@@ -10,16 +10,16 @@ export default function ItemListContainer() {
 
     
     useEffect(() => {
-        Fetch(categoryId)
-        .then (res => setProducts(res))
-        .catch(error => console.log (error))
-    }, [categoryId])
+        traerProductos(categoryId)
+            .then((res) => setProducts(res))
+            .catch((error) => console.log(error))
+}, [categoryId]);
 
 
     return(
         <>
          <div className={s.items}>
-        <ItemList productos={products}/>
+        <ItemList products={products}/>
         </div>
         </>
     );

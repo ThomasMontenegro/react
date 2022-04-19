@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styles from './ItemCount.module.css';
+import { Link } from 'react-router-dom';
 
 const ItemCount = ({ stock, initial, addCart }) => {
     const [number, setNumber] = useState(initial);
@@ -12,6 +13,8 @@ const ItemCount = ({ stock, initial, addCart }) => {
         number > initial && setNumber(number - 1);
     };
 
+    let numberCart= number >= 1
+
     return (
         <div className={styles.containerCount}>
             <div className={styles.containerButton}>
@@ -23,11 +26,13 @@ const ItemCount = ({ stock, initial, addCart }) => {
                     +
                 </button>
             </div>
+            {numberCart? 
             <div>
-                <button onClick={() => addCart(number)} className={styles.add}>
+                <Link to="/cart"><button onClick={() => addCart(number)} className={styles.add}>
                     Agregar al carrito
-                </button>
-            </div>
+                </button> </Link>  
+            </div> 
+            :ItemCount}
         </div>
     );
 };

@@ -14,7 +14,7 @@ const ItemCount = ({ stock, initial, addCart }) => {
     };
 
     let numberCart= number >= 1
-
+    
     return (
         <div className={styles.containerCount}>
             <div className={styles.containerButton}>

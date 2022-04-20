@@ -6,12 +6,15 @@ import ItemListContainer from "./components/items/ItemListContainer";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "./components/items/ItemDetailContainer";
 import Cart from "./components/Cart";
+import CartContextProvider from "./components/CartContext";
 
 
 
 export default function App() {
+  
   return (
     <>
+    <CartContextProvider>
     <BrowserRouter>
       <NavBarr/>
       <Routes>
@@ -21,6 +24,7 @@ export default function App() {
       <Route exact path="/cart" element={<Cart/>}/>
       </Routes>
     </BrowserRouter>
+    </CartContextProvider>
     </>
   );
 }

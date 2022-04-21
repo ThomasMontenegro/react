@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import styles from './ItemCount.module.css';
 import { Link } from 'react-router-dom';
 
-const ItemCount = ({ stock, initial, addCart }) => {
+
+const ItemCount = ({ stock, initial, onAdd }) => {
     const [number, setNumber] = useState(initial);
 
     const agregar = () => {
@@ -12,9 +13,8 @@ const ItemCount = ({ stock, initial, addCart }) => {
     const descontar = () => {
         number > initial && setNumber(number - 1);
     };
-
-    let numberCart= number >= 1
     
+
     return (
         <div className={styles.containerCount}>
             <div className={styles.containerButton}>
@@ -26,13 +26,11 @@ const ItemCount = ({ stock, initial, addCart }) => {
                     +
                 </button>
             </div>
-            {numberCart? 
             <div>
-                <Link to="/cart"><button onClick={() => addCart(number)} className={styles.add}>
+                <Link to="/cart"><button onClick={()=>onAdd(number)} className={styles.add}>
                     Agregar al carrito
                 </button> </Link>  
             </div> 
-            :ItemCount}
         </div>
     );
 };

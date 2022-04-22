@@ -6,14 +6,14 @@ import { Link } from 'react-router-dom';
 import {BsTrash} from "react-icons/bs";
 
 export default function Cart() {
-    const {cart, cleanCart, removeFromCart, cartPrice} = useContext(CartContext)
+    const {cart, cleanCart, removeFromCart, totalCart} = useContext(CartContext)
     
     
     
     return (
     <>
         {
-        cartPrice() === 0 
+        totalCart() === 0 
         ?   <div>
                 <h1>El carrito está vacío</h1>
                 <div>
@@ -43,8 +43,8 @@ export default function Cart() {
                     </Card> 
                 ))}  
                 </div>
-               { console.log(cartPrice())}
-            <h1  style={{display: 'flex', justifyContent: 'center'}}>Total ${cartPrice()}</h1>
+               { console.log(totalCart())}
+            <h1  style={{display: 'flex', justifyContent: 'center'}}>Total ${totalCart()}</h1>
             <div  style={{display: 'flex', justifyContent: 'space-evenly'}}>
                 <button onClick = {cleanCart}>Vaciar Carrito</button>
                 <button ><b>Finalizar Compra</b></button>

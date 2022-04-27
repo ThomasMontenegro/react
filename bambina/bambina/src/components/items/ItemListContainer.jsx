@@ -12,7 +12,7 @@ export default function ItemListContainer() {
     useEffect(()=>{
         const db = getFirestore();
         const productosCollection = query(collection (db, 'productos'), orderBy("precio"))
-        const q = Id ? query(collection (db, 'productos'), where('coleccion', '==', Id)) : productosCollection
+        const q = Id ? query(collection (db, 'productos'), where('category', '"==', Id)) : productosCollection
           
         getDocs(q)
           .then((res) => {setProducts(res.docs.map((doc) => ({id: doc.id,...doc.data()})))

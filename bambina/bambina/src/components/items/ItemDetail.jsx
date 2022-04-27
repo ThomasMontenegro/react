@@ -22,7 +22,7 @@ export default function ItemDetail( {id, imagen, nombre, precio, descripcion, st
                 <img src={imagen} alt={nombre} className={styles.imgItemDetails} />
                 <div>
                 <h2>{nombre}</h2>
-                <h3>{precio}</h3>
+                <h3>${precio}</h3>
                 <ItemCount onAdd={handleOnAdd} stock={stock} initial={0}/>
                 </div>
             </div>

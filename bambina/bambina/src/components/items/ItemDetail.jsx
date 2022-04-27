@@ -23,7 +23,6 @@ export default function ItemDetail( {id, imagen, nombre, precio, descripcion, st
                 <div>
                 <h2>{nombre}</h2>
                 <h3>{precio}</h3>
-                <h4 style={{fontSize:"50px"}}>{descripcion}</h4>
                 <ItemCount onAdd={handleOnAdd} stock={stock} initial={0}/>
                 </div>
             </div>

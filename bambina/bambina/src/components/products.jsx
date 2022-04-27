@@ -1,4 +1,5 @@
 
+
 const products = [
     {
         id: 1,
@@ -31,26 +32,4 @@ const products = [
     }
 ]
 
-
-export const traerProductos = (categoryId) => {
-    return new Promise((resolve, reject) => {
-        const productosFiltrados = products.filter(
-            (producto) => producto.category === categoryId
-        );
-        setTimeout(() => {
-            categoryId ? resolve(productosFiltrados) : resolve(products);
-        }, 300);
-    });
-};
-
-export const traerProducto = (id) => {
-    return new Promise((resolve, reject) => {
-        const productoElegido = products.find(
-            (producto) => producto.id === Number(id)
-        );
-        setTimeout(() => {
-            resolve(productoElegido);
-        }, 1000);
-    });
-};
 

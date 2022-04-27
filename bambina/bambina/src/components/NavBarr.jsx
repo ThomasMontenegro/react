@@ -10,7 +10,7 @@ export default function NavBarr() {
     <>
   <Navbar variant="dark" style={{ backgroundColor: "#ff3e99" }}>
     <Container fluid>
-   <Link to={"/"}><img src={logo} className="logo"/></Link>
+   <Link to={"/"}><img src={logo} alt="logo" className="logo"/></Link>
     <Navbar.Brand>Bambina Disegno</Navbar.Brand>
     <Nav className="m-right" >
       <Link to="/" style={{color:"white", textDecoration: "none", margin:"0px 7px" }}>Inicio</Link>

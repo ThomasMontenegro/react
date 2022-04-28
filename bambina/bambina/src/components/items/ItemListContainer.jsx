@@ -6,22 +6,22 @@ import { collection, getDocs, getFirestore, query, where} from 'firebase/firesto
 
 export default function ItemListContainer() {
     const[products, setProducts] = useState([])
-    const {id} = useParams()
+    const {categoryId} = useParams()
 
     
     useEffect(()=>{
         const db = getFirestore();
         let productosRef;
-    if (!id) {
+    if (!categoryId) {
       productosRef = collection(db, 'productos');
     } else {
-      productosRef = query(collection(db, 'productos'), where('category', '==', id));
+      productosRef = query(collection(db, 'productos'), where('category', '==', categoryId));
     }
 
     getDocs(productosRef).then((res) => {
       setProducts(res.docs.map((item) => ({ id: item.id, ...item.data() })));
     });
-  }, [id]);
+  }, [categoryId]);
 
     return(
         <>

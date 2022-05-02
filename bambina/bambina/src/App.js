@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ItemDetailContainer from "./components/items/ItemDetailContainer";
 import Cart from "./components/Cart";
 import CartContextProvider from "./components/CartContext";
+import Checkout from "./components/Checkout";
 
 
 
@@ -18,6 +19,7 @@ export default function App() {
     <BrowserRouter>
       <NavBarr/>
       <Routes>
+      <Route exact path="/Checkout" element={<Checkout/>}/>
       <Route exact path="/" element={<ItemListContainer/>}/>
       <Route exact path="/category/:categoryId" element={<ItemListContainer/>}/>
       <Route exact path="/item/:id" element={<ItemDetailContainer/>}/>

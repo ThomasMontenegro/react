@@ -47,7 +47,7 @@ export default function Cart() {
             <h1  style={{display: 'flex', justifyContent: 'center'}}>Total ${totalCart()}</h1>
             <div  style={{display: 'flex', justifyContent: 'space-evenly'}}>
                 <button onClick = {cleanCart}>Vaciar Carrito</button>
-                <Link to="/Checkout"><button ><b>Finalizar Compra</b></button></Link>
+                <Link to="/Checkout" ><button ><b>Finalizar Compra</b></button></Link>
                 <Link to='/'><button>Seguir comprando</button></Link>
             </div>
             </div>

@@ -7,10 +7,9 @@ import { useState } from 'react';
 import { Link, Navigate } from 'react-router-dom';
 
 export default function Checkout() {
-    const {cart, totalCart, totalItemsCart, cleanCart} = useContext(CartContext)
-    const { register, handleSubmit, formState: { errors } } = useForm();
-    
-    console.log(errors);
+    const {cart, totalCart, cleanCart, totalItems} = useContext(CartContext)
+    const { register, handleSubmit } = useForm();
+
     const [orderId, setOrderId] = useState()
 
     const onSubmit = data => {
@@ -50,17 +49,17 @@ export default function Checkout() {
         if (orderId) {
             return (
                 <>
-                <div className='flex-padre-form'>
-                    <h2 className='carrito-titulo-form1'>Gracias por tu compra!</h2>
-                    <h3 className='carrito-titulo-form'>Tu numero de orden es: </h3>
-                    <h3 className='carrito-titulo-form'><b>{orderId}</b></h3>
+                <div>
+                    <h2>Gracias por tu compra!</h2>
+                    <h3>Tu numero de orden es: </h3>
+                    <h3><b>{orderId}</b></h3>
                     <Link to='/'><button className='boton-volver'>Volver</button></Link>
                 </div>
                 </>
             )
         }
         
-        if(carrito.length === 0){
+        if(cart.length === 0){
             alert('No hay items en el carrito')
             return <Navigate to='/'/>
         }
@@ -71,7 +70,7 @@ export default function Checkout() {
             <form onSubmit={handleSubmit(onSubmit)} className='checkout'>
                 <div className='resumen-compra'>
                     <h3 className='legend'>Resumen de tu compra:</h3>
-                    <p className='legend1'>{totalItemsCart()} productos</p>
+                    <p className='legend1'>{totalItems()} productos</p>
                     <p className='legend1'>Total a pagar: ${totalCart()}</p>
                 </div>
                 <legend className='legend'>Ingrese sus datos para finalizar:</legend>

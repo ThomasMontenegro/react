@@ -14,6 +14,10 @@ const CartContextProvider = ({children}) => {
         setCart(cart.filter((el) => el.id !== id))
     }
 
+    const totalItemsCart = () => {
+        return cart.reduce((acc, e) => acc + e.cantidad, null)
+    }
+    
     const cleanCart = () =>  {
         setCart([]);
         setCartEmpty(true)
@@ -29,7 +33,7 @@ const CartContextProvider = ({children}) => {
     }
     return(
         <>
-        <CartContext.Provider value={{cart, setCart, addToCart, removeFromCart, totalCart, cleanCart, onCart}}>
+        <CartContext.Provider value={{cart, setCart, addToCart, removeFromCart, totalCart, cleanCart, onCart, totalItemsCart}}>
             {children}
         </CartContext.Provider>
         </>

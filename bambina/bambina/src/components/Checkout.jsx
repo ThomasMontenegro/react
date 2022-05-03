@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 import Button from "react-bootstrap/Button"
 import Form from "react-bootstrap/Form"
-import Container from "react-bootstrap/Container"
 import { useContext } from 'react';
 import { CartContext} from './CartContext';
-import {collection,addDoc, getFirestore} from "firebase/firestore"
+import {collection,addDoc, getFirestore, Timestamp} from "firebase/firestore"
 export  default function Cart() {
 
-    const {cart,totalCart} = useContext(CartContext)
+    const {cart,totalCart, totalItems} = useContext(CartContext)
 
     const [name, setName] =   useState();
     const [email, setEmail] = useState();
@@ -21,21 +20,23 @@ export  default function Cart() {
 
     let buyer = {
         buyer: { name, phone, email },
-        items: cart,
-        total: totalCart(),
+        items: parseInt(cart),
+        totalItems: totalItems(),
+        total: "$" + totalCart(),
+         date: Timestamp.fromDate(new Date()),
     }; 
 
     addDoc(Orders,buyer).then(({id}) => {
         console.log(id)
     })
 
-    alert("Tu pedido se ha registrado" + "\n"+ name +"\n"+ email +"\n" +phone);
+    alert("Tu pedido se fue registrado" + " " + name );
     }
     
     return(
         <>
 
-        <p className="d-flex justify-content-center">Pone tus datos para finalizar la compra</p>
+        <p className="d-flex justify-content-center">Necesitamos tus datos para finalizar la compra</p>
         <Form className="d-flex justify-content-center">
             
             <input placeholder={"Nombre y apellido"}  type={"text"} value={name}

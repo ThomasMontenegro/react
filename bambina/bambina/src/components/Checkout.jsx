@@ -34,10 +34,9 @@ export  default function Cart() {
     
     return(
         <>
-      <Container className="justify-content-center">
 
-        <p>Pone tus datos para finalizar la compra</p>
-        <Form>
+        <p className="d-flex justify-content-center">Pone tus datos para finalizar la compra</p>
+        <Form className="d-flex justify-content-center">
             
             <input placeholder={"Nombre y apellido"}  type={"text"} value={name}
             onChange={(e) => {setName(e.currentTarget.value);}}/>
@@ -48,10 +47,9 @@ export  default function Cart() {
             <input placeholder={"Numero de Celular"} type={"number"} value={phone}
             onChange={(e) => {setPhone(e.currentTarget.value);}}/>
         </Form>
-      </Container>
-                    <Form className="d-flex">
-                        <Button variant="outline-success" onClick={terminarCompra}>Finalizar Comprar</Button>
-                    </Form>
+            <Form className="d-flex justify-content-center">
+                  <Button style={{color: "white", backgroundColor:"#ff3e99", borderColor:"pink", marginTop:"50px"}} onClick={terminarCompra}>Finalizar Comprar</Button>
+             </Form>
         </>
     )
    

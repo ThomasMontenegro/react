@@ -1,6 +1,6 @@
 #  🧉 Bambina Disegno
 
-Bambina Disegno es un emprendimiento familiar de artesanías y manualidades.
+## Bambina Disegno es un emprendimiento familiar de artesanías y manualidades.
 ![image](preview.gif)
 ## 📝 Instalación
 
@@ -25,10 +25,11 @@ npm start
  React Bootstrap
 
 # 📌 Links
+(
+ [Repositorio]  (https://github.com/ThomasMontenegro/react)
 
- Repositorio
 
- Live
+ [Live] (https://bambina-disegno.web.app/)
 
 
 

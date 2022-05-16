@@ -36,4 +36,4 @@ npm start
 # 🤝 Comentarios
 cualquier apreciación, comentario, consejo es bien recibido! Aprendemos juntos.
 
-Give a ⭐️ if you like this project!
+Dame una⭐️ si te gusto el proyecto!

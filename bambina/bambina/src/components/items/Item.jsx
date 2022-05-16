@@ -1,21 +1,23 @@
 import React from "react";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
+import { Container } from "react-bootstrap";
 
 
 const Item = ({ product }) => {
     return(  
-    <Card style={{ backgroundColor:"pink", width: '10rem' ,padding: "20px"}}>
-  <Card.Img variant="top" src={product.imagen} />
+      <Container fluid>
+    <Card style={{ backgroundColor:"pink", width: '8rem' ,padding: "20px" ,display:"flex", justifyContent:"space-around", flexWrap:"wrap"}}>
+  <Card.Img variant="top" src={product.imagen} style={{height:"250px"}}/>
   <Card.Body>
-    <Card.Title>{product.nombre} </Card.Title>
+    <Card.Title style={{fontSize:"40px"}}>{product.nombre} </Card.Title>
     <Card.Text>
         ${product.precio}
-        <h5 style={{fontSize:"20px"} }>#{product.category}</h5>
-        <button style={{backgroundColor:"white"}}><Link to={`/item/${product.id}`} style={{color:"black", textDecoration: "none", fontSize:"40px" }}>ver detalles</Link></button>
+        <button style={{backgroundColor:"white"}}><Link to={`/item/${product.id}`} style={{color:"black", textDecoration: "none", fontSize:"25px" }}>ver detalles</Link></button>
     </Card.Text>
   </Card.Body>
 </Card>
+</Container>
 )  
 }
 

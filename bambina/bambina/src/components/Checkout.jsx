@@ -29,9 +29,11 @@ export  default function Cart() {
     addDoc(Orders,buyer).then(({id}) => {
         console.log(id)
     })
-
+    
     alert("Tu pedido se fue registrado" + " " + name );
     }
+    
+
     
     return(
         <>
@@ -39,16 +41,16 @@ export  default function Cart() {
         <p className="d-flex justify-content-center">Necesitamos tus datos para finalizar la compra</p>
         <Form className="d-flex justify-content-center">
             
-            <input placeholder={"Nombre y apellido"}  type={"text"} value={name}
+            <input placeholder={"Nombre y apellido"}  type={"text"} value={name} pattern="^[\w'\-,.][^0-9_!¡?÷?¿/\\+=@#$%ˆ&*(){}|~<>;:[\]]{2,}$"
             onChange={(e) => {setName(e.currentTarget.value);}}/>
 
-            <input placeholder={"E-mail"} type={"email"} value={email}
+            <input placeholder={"E-mail"} type={"email"} value={email} pattern={"^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z-]+(?:\.[a-zA-Z0-9-]+)$"}
             onChange={(e) => {setEmail(e.currentTarget.value);}}/>
 
-            <input placeholder={"Numero de Celular"} type={"number"} value={phone}
+            <input placeholder={"Numero de Celular"} type={"number"} value={phone} pattern={"^([0-9])*$"}
             onChange={(e) => {setPhone(e.currentTarget.value);}}/>
         </Form>
-            <Form className="d-flex justify-content-center">
+            <Form className="d-flex justify-content-center" >
                   <Button style={{color: "white", backgroundColor:"#ff3e99", borderColor:"pink", marginTop:"50px"}} onClick={terminarCompra}>Finalizar Comprar</Button>
              </Form>
         </>

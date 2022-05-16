@@ -26,10 +26,10 @@ npm start
 
 # 📌 Links
 
-- [Repositorio]  (https://github.com/ThomasMontenegro/react)
+- [Repositorio](https://github.com/ThomasMontenegro/react)
 
 
-- [Live] (https://bambina-disegno.web.app/)
+- [Live](https://bambina-disegno.web.app/)
 
 
 

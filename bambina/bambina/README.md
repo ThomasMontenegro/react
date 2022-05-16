@@ -1,7 +1,7 @@
 #  🧉 Bambina Disegno
 
 Bambina Disegno es un emprendimiento familiar de artesanías y manualidades.
-![](/preview.gif)
+![image](preview.gif)
 ## 📝 Instalación
 
 ¡Clona el repositorio y comenzá a utilizarlo!

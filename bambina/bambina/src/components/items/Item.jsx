@@ -2,7 +2,7 @@ import React from "react";
 import Card from "react-bootstrap/Card";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
-
+import styles from './Item.module.css';
 
 const Item = ({ product }) => {
     return(  
@@ -13,7 +13,7 @@ const Item = ({ product }) => {
     <Card.Title style={{fontSize:"40px"}}>{product.nombre} </Card.Title>
     <Card.Text>
         ${product.precio}
-        <button style={{backgroundColor:"white"}}><Link to={`/item/${product.id}`} style={{color:"black", textDecoration: "none", fontSize:"25px" }}>ver detalles</Link></button>
+        <button className={ styles.button}><Link to={`/item/${product.id}`} style={{color:"black", textDecoration: "none", fontSize:"25px" }}>ver detalles</Link></button>
     </Card.Text>
   </Card.Body>
 </Card>

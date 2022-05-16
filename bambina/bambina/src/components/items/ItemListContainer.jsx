@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { Container } from "react-bootstrap";
 import ItemList from "./ItemList";
 import { useParams } from "react-router-dom";
 import s from "./ItemListContainer.module.css";

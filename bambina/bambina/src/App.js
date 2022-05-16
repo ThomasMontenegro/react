@@ -8,6 +8,7 @@ import ItemDetailContainer from "./components/items/ItemDetailContainer";
 import Cart from "./components/Cart";
 import CartContextProvider from "./components/CartContext";
 import Checkout from "./components/Checkout";
+import Footer from "./components/Footer";
 
 
 
@@ -25,6 +26,7 @@ export default function App() {
       <Route exact path="/item/:id" element={<ItemDetailContainer/>}/>
       <Route exact path="/cart" element={<Cart/>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
     </CartContextProvider>
     </>

@@ -1,7 +1,11 @@
 
   .items{
-    display: flex;
-    justify-content: space-between;
+    display: flex; 
+    flex-wrap: wrap;
     margin-top: 30px;
     margin-bottom: 15px;
+  }
+
+  .list{
+    flex: 1 1 100px;
   }

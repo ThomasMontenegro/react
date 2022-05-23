@@ -27,7 +27,7 @@ export default function ItemListContainer() {
         <>
        
          <div className={s.items}>
-        <ItemList products={products}/>
+        <ItemList products={products}  className={s.list}/>
         </div>
         </>
     );
